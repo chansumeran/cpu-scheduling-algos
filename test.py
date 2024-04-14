@@ -1,6 +1,7 @@
 from process import Process
 from fcfs import FCFS
 from sjf import SJF
+from srtf import SRTF
 from priority import Priority
 from rr import RR
 
@@ -8,12 +9,14 @@ from rr import RR
 def main():
 
     # test_sjf()
-    # test_fcfs()
 
     # test_priority()
     # test_rr()
     choices = list(map(str, range(1, 6)))
     print(choices)
+
+    # test_fcfs()
+    test_srtf()
 
 
 def test_sjf():
@@ -26,6 +29,17 @@ def test_sjf():
     processes = [p1, p2, p3, p4, p5]
     sjf = SJF(processes)
     sjf.solve()
+
+def test_srtf():
+    p1 = Process(1, 3, 4)
+    p2 = Process(2, 5, 9)
+    p3 = Process(3, 8, 4)
+    p4 = Process(4, 0, 7)
+    p5 = Process(5, 12, 6)
+
+    processes = [p1, p2, p3, p4, p5]
+    srtf = SRTF(processes)
+    srtf.solve()
 
 
 def test_fcfs():

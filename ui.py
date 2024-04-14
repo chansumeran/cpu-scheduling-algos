@@ -7,6 +7,7 @@ from fcfs import FCFS
 from priority import Priority
 from rr import RR
 from sjf import SJF
+from srtf import SRTF
 from process import Process
 from algorithm import Algorithm
 from colorama import Fore
@@ -57,7 +58,8 @@ class UI:
             SJF(processes).solve()
         elif algorithm == Algorithm.RR.value:
             RR(processes=processes, quantum=quantum).solve()
-        pass
+        elif algorithm == Algorithm.SRTF.value:
+            SRTF(processes).solve()
 
     def _prompt_processes(self, algorithm):
         num_processes = int(input("Number of processes >> "))
