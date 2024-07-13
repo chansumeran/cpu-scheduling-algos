@@ -2,7 +2,7 @@
 
 ### Contains different implementations of CPU scheduling algorithms. 
 
-Groupmate: Christian Sumeran (link to github here)
+Groupmate: Christian Sumeran [(link to github here)](https://github.com/chansumeran)
 
 An windows executable file can be found at /dist/main.exe
 
